@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Bukti Pembayaran{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Bukti Pembayaran</h2>
+        <p>Silakan upload bukti pembayaran Anda.</p>
+        <form method="POST" action="{{ url_for('buktipembayaran') }}" enctype="multipart/form-data">
+            <label for="bukti_pembayaran">Upload Bukti Pembayaran:</label>
+            <input type="file" id="bukti_pembayaran" name="bukti_pembayaran" required>
+        
+        </form>
+        <div>
+            <a href ="finish" > <button>Checkout</button></a>
+        </div>
+    </section>
+{% endblock %}

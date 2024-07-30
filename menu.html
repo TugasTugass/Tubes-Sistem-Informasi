@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Menu{% endblock %}
+
+{% block content %}
+<h2>Produk Kami</h2>
+<div class="product">
+    <div class="produk1">
+        <img src="{{ url_for('static', filename='gambar/browniesss.jpeg') }}" alt="Classic_Browniess">
+        <h2>Classic Browniess</h2>
+        <p>Rp 70.000</p>
+        <a href="{{ url_for('order', id=1) }}"><button>Order Sekarang</button></a>
+    </div>
+    <div class="produk1">
+        <img src="{{ url_for('static', filename='gambar/caramelow.jpeg') }}" alt="caramellow">
+        <h2>Caramellow</h2>
+        <p>Rp 900.000</p>
+        <a href="{{ url_for('order', id=2) }}"><button>Order Sekarang</button></a>
+    </div>
+    <div class="produk1">
+        <img src="{{ url_for('static', filename='gambar/wholecake.jpeg') }}" alt="Sunscreen">
+        <h2>Wholecake</h2>
+        <p>Rp 50.000</p>
+        <a href="{{ url_for('order', id=3) }}"><button>Order Sekarang</button></a>
+    </div>
+</div>
+{% endblock %}

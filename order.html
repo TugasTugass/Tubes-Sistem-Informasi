@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Order{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Checkout</h2>
+        <form class="order-form" action="{{ url_for('order') }}" method="post">
+            <div>
+                <h3>Informasi Pengiriman</h3>
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Alamat</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="phone">Nomor Telepon</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+
+            <div>
+                <h3>Metode Pembayaran</h3>
+                <label>
+                    <input type="radio" name="payment_method" value="cod" required>
+                    Cash on Delivery (COD)
+                </label><br>
+                <label>
+                    <input type="radio" name="payment_method" value="bank_transfer" required>
+                    Transfer Bank
+                </label>
+            </div>
+            
+            <button type="submit">Order Sekarang</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,1 @@
+cmd /k "C:\Users\62813\Documents\Tugasbesar\myenv\Scripts\activate.bat"
